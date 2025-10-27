@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Charmy — Joyería en plata 925</title>
+  <meta name="description" content="Charmy: joyería en plata 925. Venta al menudeo y mayoreo. Pulseras, dijes y accesorios estilo europeo.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <div class="logo">Ch</div>
+      <div>
+        <h1>Charmy</h1>
+        <p class="tagline">Joyería en Plata 925 — Estilo europeo de charms</p>
+      </div>
+    </div>
+    <nav class="top-nav">
+      <a href="#inicio">Inicio</a>
+      <a href="#catalogo">Catálogo</a>
+      <a href="#mayoreo">Mayoreo</a>
+      <a href="#contacto">Contacto</a>
+      <button id="openCart" class="btn">Carrito (<span id="cartCount">0</span>)</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="hero-inner">
+        <h2>Brilla con estilo — Plata 925</h2>
+        <p>Diseños inspirados en el estilo europeo de charms. Venta al menudeo y mayoreo.</p>
+        <a href="#catalogo" class="btn btn-primary">Ver catálogo</a>
+      </div>
+      <div class="hero-img" role="img" aria-label="Imagen Charmy"></div>
+    </section>
+
+    <section id="catalogo" class="catalog-section">
+      <div class="section-header">
+        <h3>Catálogo</h3>
+        <div class="controls">
+          <input id="search" placeholder="Buscar producto..." />
+          <select id="sort">
+            <option value="popular">Más populares</option>
+            <option value="price-asc">Precio: bajo a alto</option>
+            <option value="price-desc">Precio: alto a bajo</option>
+          </select>
+        </div>
+      </div>
+      <div id="productGrid" class="product-grid"></div>
+    </section>
+
+    <section id="mayoreo" class="mayoreo-section">
+      <h3>Mayoreo</h3>
+      <p>Ofrecemos precios especiales por compras al mayoreo. Precio por pieza disponible desde 6 piezas. Activa el botón "Ver mayoreo" para ver precios de mayoreo.</p>
+      <div class="wholesale-controls">
+        <button id="toggleWholesale" class="btn btn-ghost">Ver mayoreo</button>
+        <div class="wholesale-note">Todas las piezas son Plata 925. No somos distribuidor oficial de marcas registradas; ofrecemos diseños inspirados en el estilo europeo de charms.</div>
+      </div>
+    </section>
+
+    <section id="contacto" class="contact-section">
+      <h3>Contacto</h3>
+      <p>¿Preguntas sobre mayoreo, tiempos de entrega o catálogo? Escríbenos:</p>
+      <div class="contact-links">
+        <a id="whatsappBtn" class="btn btn-whatsapp" href="#" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn btn-instagram" href="https://www.instagram.com/charmy_mexico?igsh=MWdkeG9uemtpamlmdg==" target="_blank" rel="noopener">Instagram</a>
+      </div>
+
+      <form id="contactForm" onsubmit="event.preventDefault(); alert('Formulario enviado (simulación).');">
+        <input placeholder="Nombre" required />
+        <input placeholder="Correo" type="email" required />
+        <textarea placeholder="Mensaje" required></textarea>
+        <div style="display:flex;gap:8px">
+          <button class="btn btn-primary" type="submit">Enviar</button>
+          <button class="btn btn-ghost" type="reset">Borrar</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <!-- Carrito panel -->
+  <aside id="cartPanel" class="cart-panel hidden" aria-hidden="true">
+    <h4>Tu pedido</h4>
+    <div id="cartList" class="cart-list"></div>
+    <div class="cart-summary">
+      <div>Subtotal: <strong id="subtotalText">$0.00</strong></div>
+      <div id="wholesaleApplied" class="small muted"></div>
+    </div>
+    <div class="cart-actions">
+      <button id="orderWhatsApp" class="btn btn-whatsapp">Enviar pedido por WhatsApp</button>
+      <button id="closeCart" class="btn btn-ghost">Cerrar</button>
+    </div>
+    <p class="small muted">Este sitio es una demo. Integra pasarela de pago para procesar cobros reales.</p>
+  </aside>
+
+  <footer class="site-footer">
+    <div>
+      <strong>Charmy</strong> • Joyería en Plata 925
+    </div>
+    <div class="socials">
+      <a href="https://www.instagram.com/charmy_mexico?igsh=MWdkeG9uemtpamlmdg==" target="_blank" rel="noopener">Instagram</a>
+      <a href="#" id="whLinkFooter">WhatsApp</a>
+    </div>
+    <small>© Charmy <span id="year"></span> — No somos distribuidor oficial de marcas registradas.</small>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
